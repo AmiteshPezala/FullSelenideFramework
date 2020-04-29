@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MRCS Test Suite">
+  <listeners>
+    <listener class-name="MRCS.Utils.ReportListener"/>
+  </listeners>
+  <test thread-count="1" name="HedisCOA-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisCOA.COA_AdvanceCarePlanningShowsPositiveCompliance_TC3"/>
+      <class name="MRCS.Tests.HedisCOA.COA_MedicationReviewShowsPositiveCompliance_TC6"/>
+      <class name="MRCS.Tests.HedisCOA.COA_PainAssessmentReviewShowsPositiveCompliance_TC8"/>
+      <class name="MRCS.Tests.HedisCOA.COA_FunctionalStatusAssessment_TC10"/>
+      <class name="MRCS.Tests.HedisCOA.COA_FunctionalStatusAssessmentADL_TC11"/>
+      <class name="MRCS.Tests.HedisCOA.COA_FunctionalStatusAssessmentIADL_TC12"/>
+      <class name="MRCS.Tests.HedisCOA.COA_FunctionalStatusAssessmentFST_TC13"/>
+      <class name="MRCS.Tests.HedisCOA.COA_VerifyNRC_TC19"/>
+      <class name="MRCS.Tests.HedisCOA.COA_VerifyExclusionNonCompliance_TC14"/>
+      <class name="MRCS.Tests.HedisCOA.COA_VerifyValidationMessage_TC17"/>
+    </classes>
+  </test> <!-- HedisCOA-Tests -->
+  <test thread-count="1" name="HedisABA-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisABA.ABA_CheckComplianceAccordingToBMI_TC7"/>
+      <class name="MRCS.Tests.HedisABA.ABA_CheckComplianceWithoutWeightForBMI_TC8"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyBMIDate_TC6"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyBMIMaxVaule_TC4"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyBMIPercentileVaule_TC5"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyComplianceForBothConditionForBMI_TC18"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyComplianceWithoutHeightForBMI_TC13"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyContraField_TC20"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyExclusionField_TC19"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyHeightFieldAcceptsDecimal_TC16"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyLimitOfHeightField_TC15"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyLimitOfWeightField_TC9"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyNRCDisabledForPositiveCompliance_TC14"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyWeightFieldAcceptDecimal_TC10"/>
+      <class name="MRCS.Tests.HedisABA.ABA_WeightFieldIsRequired_TC11"/>
+      <class name="MRCS.Tests.HedisABA.ABA_VerifyValidationMessageForDates_TC25"/>
+    </classes>
+  </test> <!-- HedisABA-Tests -->
+  <test thread-count="1" name="HedisCBP-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisCBP.CBP_VerifyChaseIsScoringForLowest_TC6"/>
+      <class name="MRCS.Tests.HedisCBP.CBP_VerifyComplianceForBPDate_TC7"/>
+      <class name="MRCS.Tests.HedisCBP.CBP_VerifyDatesOfBPField_TC3"/>
+      <class name="MRCS.Tests.HedisCBP.CBP_VerifyNRCValidation_TC13"/>
+      <class name="MRCS.Tests.HedisCBP.CBP_VerifyTwoAdminDates_TC1"/>
+      <class name="MRCS.Tests.HedisCBP.CBP_VerifyContraField_TC9"/>
+      <class name="MRCS.Tests.HedisCBP.CBP_VerifyExclusionField_TC8"/>
+      <class name="MRCS.Tests.HedisCBP.CBP_VerifyValidationMessageForDates_TC14"/>
+    </classes>
+  </test> <!-- HedisCBP-Tests -->
+  <test thread-count="1" name="HedisW34-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisW34.W34_VerifyChaseNotSubmittedWithoutNRC_TC10"/>
+      <class name="MRCS.Tests.HedisW34.W34_VerifyNumeratorsAvailableForW34_TC3"/>
+      <class name="MRCS.Tests.HedisW34.W34_VerifyPositiveComplianceForW34_TC4"/>
+    </classes>
+  </test> <!-- HedisW34-Tests -->
+  <test thread-count="1" name="HedisW15-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisW15.W15_VerifyNumerators_TC3"/>
+      <class name="MRCS.Tests.HedisW15.W15_PositiveCompliance_TC4"/>
+      <class name="MRCS.Tests.HedisW15.W15_VerifyNRCSubmission_TC12"/>
+    </classes>
+  </test> <!-- HedisW15-Tests -->
+  <test thread-count="1" name="HedisCCS-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisCCS.CCS_VerifyPAPSmearCompliance_TC2"/>
+      <class name="MRCS.Tests.HedisCCS.CCS_VerifyPAPSmearComplianceWhenAgeBetween24To64_TC3"/>
+      <class name="MRCS.Tests.HedisCCS.CCS_VerifyHPVForPositiveCompliance_TC5"/>
+      <class name="MRCS.Tests.HedisCCS.CCS_VerifyCervicalCancerScreeningPositive_TC7"/>
+      <class name="MRCS.Tests.HedisCCS.CCS_VerifyCervicalCancerScreeningPositive_TC8"/>
+      <class name="MRCS.Tests.HedisCCS.CCS_VerifyContraNonCompliance_TC11"/>
+      <class name="MRCS.Tests.HedisCCS.CCS_VerifyExclusionNonCompliance_TC10"/>
+      <class name="MRCS.Tests.HedisCCS.CCS_VerifyValidationMessage_TC14"/>
+    </classes>
+  </test> <!-- HedisCCS-Tests -->
+  <test thread-count="1" name="HedisART-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisART.ART_ValidationMessageForAllFields_TC3"/>
+      <class name="MRCS.Tests.HedisART.ART_VerifyNegativeComplianceSubmitted_TC8"/>
+      <class name="MRCS.Tests.HedisART.ART_VerifyNRCValidation_TC10"/>
+    </classes>
+  </test> <!-- HedisART-Tests -->
+  <test thread-count="1" name="HedisWCC-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisWCC.WCC_BMIShowsPositiveComplianceForWCC_TC5"/>
+      <class name="MRCS.Tests.HedisWCC.WCC_NutritionCounselingShowsPositiveCompliance_TC8"/>
+      <class name="MRCS.Tests.HedisWCC.WCC_PhysicalActivityShowsPositiveCompliance_TC9"/>
+      <class name="MRCS.Tests.HedisWCC.WCC_ToCheckNRCValidation_TC18"/>
+      <class name="MRCS.Tests.HedisWCC.WCC_NegativeChaseSubmittedWithNRC_TC13"/>
+      <class name="MRCS.Tests.HedisWCC.WCC_VerifyContraOfNonCompliance_TC11"/>
+      <class name="MRCS.Tests.HedisWCC.WCC_VerifyExclusionOfNonCompliance_TC10"/>
+      <class name="MRCS.Tests.HedisWCC.WCC_VerifyFieldsOfBMIVisitIsRequired_TC2"/>
+      <class name="MRCS.Tests.HedisWCC.WCC_VerifyFieldsOfHeightIsRequired_TC3"/>
+      <class name="MRCS.Tests.HedisWCC.WCC_VerifyFieldsOfWeightIsRequired_TC4"/>
+    </classes>
+  </test> <!-- HedisWCC-Tests -->
+  <test thread-count="1" name="HedisAWC-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisAWC.AWC_VerifyAllNumeratorOfAWC_TC3"/>
+      <class name="MRCS.Tests.HedisAWC.AWC_VerifyAWCPositiveCompliance_TC4"/>
+      <class name="MRCS.Tests.HedisAWC.AWC_VerifyNRCValidationForNegativeComplianceChase_TC9"/>
+      <class name="MRCS.Tests.HedisAWC.AWC_ValidationForDates_TC5"/>
+      <class name="MRCS.Tests.HedisAWC.AWC_VerifyDateForExclusionField_TC6"/>
+    </classes>
+  </test> <!-- HedisAWC-Tests -->
+  <test thread-count="1" name="HedisIMA-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisIMA.IMA_PositiveComplianceForHPV_TC7"/>
+      <class name="MRCS.Tests.HedisIMA.IMA_PositiveComplianceForHPVFor3Dates_TC8"/>
+      <class name="MRCS.Tests.HedisIMA.IMA_PositiveComplianceForHPVFor14DaysDifference_TC9"/>
+      <class name="MRCS.Tests.HedisIMA.IMA_PositiveComplianceForMeningococcal_TC3"/>
+      <class name="MRCS.Tests.HedisIMA.IMA_PositiveComplianceForTdap_TC5"/>
+      <class name="MRCS.Tests.HedisIMA.IMA_VerifyValidationForTimeframe_TC15"/>
+    </classes>
+  </test> <!-- HedisIMA-Tests -->
+  <test thread-count="1" name="HedisLSC-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisLSC.LSC_MessageForNRCValidation_TC6"/>
+      <class name="MRCS.Tests.HedisLSC.LSC_PositiveComplianceForLeadScreening_TC2"/>
+    </classes>
+  </test> <!-- HedisLSC-Tests -->
+  <test thread-count="1" name="HedisMRP-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisMRP.MRP_PositiveComplianceForMedicalReconcilation_TC6"/>
+      <class name="MRCS.Tests.HedisMRP.MRP_VarifyValidationMessageForMRD_TC13"/>
+      <class name="MRCS.Tests.HedisMRP.MRP_VarifyValidationMessageForRDD_TC4"/>
+      <class name="MRCS.Tests.HedisMRP.MRP_VerifyingAdminDate_TC2"/>
+    </classes>
+  </test> <!-- HedisMRP-Tests -->
+  <test thread-count="1" name="HedisOMW-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisOMW.OMW_PositiveComplainceForPrescriptionDate_TC6"/>
+      <class name="MRCS.Tests.HedisOMW.OMW_PositiveComplianceForInpatientBMD_TC5"/>
+      <class name="MRCS.Tests.HedisOMW.OMW_PositiveComplianceForInPatientTherapy_TC8"/>
+      <class name="MRCS.Tests.HedisOMW.OMW_PositiveComplianceForOutpatientBMD_TC4"/>
+      <class name="MRCS.Tests.HedisOMW.OMW_PositiveComplianceForOutpatientTherapy_TC7"/>
+    </classes>
+  </test> <!-- HedisOMW-Tests -->
+  <test thread-count="1" name="HedisCOL-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisCOL.COL_VerifyColateralCancerScreeningShowsPositiveCompliance_TC2"/>
+      <class name="MRCS.Tests.HedisCOL.COL_VerifyColateralCancerScreeningShowsPositiveComplianceWhenFlexSigmoidoscopy_TC4"/>
+      <class name="MRCS.Tests.HedisCOL.COL_VerifyColateralCancerScreeningShowsPositiveCompliance_TC6"/>
+      <class name="MRCS.Tests.HedisCOL.COL_VerifyColateralCancerScreeningShowsPositiveCompliance_TC8"/>
+      <class name="MRCS.Tests.HedisCOL.COL_VerifyColateralCancerScreeningShowsPositiveCompliance_TC10"/>
+      <class name="MRCS.Tests.HedisCOL.COL_VerifyColateralCancerScreeningShowsPositiveCompliance_TC12"/>
+      <class name="MRCS.Tests.HedisCOL.COL_VerifyExclusionNonCompliance_TC14"/>
+      <class name="MRCS.Tests.HedisCOL.COL_VerifyContraNonCompliance_TC15"/>
+      <class name="MRCS.Tests.HedisCOL.COL_VerifyValidationMassage_TC19"/>
+    </classes>
+  </test> <!-- HedisCOL-Tests -->
+  <test thread-count="1" name="HedisCIS-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisCIS.CIS_ComplianceFollow14DaysRule_TC31"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_NegativeComplianceForDtap_TC3"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_NegativeComplianceForIPV_TC6"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceFor2DoseRotavirus_TC26"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceFor3DoseRotavirus_TC25"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositivecomplianceForCombinationOfRotavirus_TC27"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForDiseaseSeropositiveForVzv_TC21"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForDiseaseSeropositiveofMMR_TC18"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForHEPA_TC8"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForHEPADiseaseSeropositiveDate_TC9"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForHEPB_TC11"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForHEPBDiseaseSeropositiveDate_TC12"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForHIB_TC14"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForInfluenza_TC29"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForIPV_TC5"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForMeaslesMumsRubella_TC17"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForMMR_TC16"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForPCV_TC23"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_PositiveComplianceForVZV_TC20"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_VerifyFourDatesAreRequired_TC2"/>
+      <class name="MRCS.Tests.HedisCIS.CIS_VerifyNRCValidation_TC37"/>
+    </classes>
+  </test> <!-- HedisCIS-Tests -->
+  <test thread-count="1" name="HedisTRC-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisTRC.TRC_VerifyAdminAdmissionDate_TC2"/>
+      <class name="MRCS.Tests.HedisTRC.TRC_VerifyRevisedAdmissionDate_TC3"/>
+      <class name="MRCS.Tests.HedisTRC.TRC_VerifyAdminDischargeDate_TC4"/>
+      <class name="MRCS.Tests.HedisTRC.TRC_VerifyRevisedDischargeDate_TC5"/>
+      <class name="MRCS.Tests.HedisTRC.TRC_VerifyNotificationOfPatient_TC6"/>
+      <class name="MRCS.Tests.HedisTRC.TRC_VerifyNotificationDischarge_TC7"/>
+      <class name="MRCS.Tests.HedisTRC.TRC_VerifyNotificationOfPatientEngagementAfterDischarge_TC8"/>
+      <class name="MRCS.Tests.HedisTRC.TRC_VerifyMedicationReconcilationPositiveComplianceDate_TC9"/>
+      <class name="MRCS.Tests.HedisTRC.TRC_VerifyNRCValidation_TC19"/>
+      <class name="MRCS.Tests.HedisTRC.TRC_VerifyMRDates_TC20"/>
+    </classes>
+  </test> <!-- HedisTRC-Tests -->
+  <test thread-count="1" name="HedisPPC-Tests" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MRCS.Tests.HedisPPC.PPC_VerifyAdminDOD_TC3"/>
+      <class name="MRCS.Tests.HedisPPC.PPC_VerifyAdminEnrollmentDate_TC2"/>
+      <class name="MRCS.Tests.HedisPPC.PPC_VerifyAdminPrenatalDateRange_TC4"/>
+      <class name="MRCS.Tests.HedisPPC.PPC_VerifyAdminPostPartumDate_TC5"/>
+      <class name="MRCS.Tests.HedisPPC.PPC_VerifyMRDOD_TC6"/>
+      <class name="MRCS.Tests.HedisPPC.PPC_VerifyMRPrenetalDateRange_TC7"/>
+      <class name="MRCS.Tests.HedisPPC.PPC_VerifyMRPostpartumRange_TC8"/>
+      <class name="MRCS.Tests.HedisPPC.PPC_VerifyPrenatalComplianceShowsPositive_TC16"/>
+      <class name="MRCS.Tests.HedisPPC.PPC_PrenatalCompliancePositiveWhenProviderPCP_TC17"/>
+      <class name="MRCS.Tests.HedisPPC.PPC_VerifyPrenatalComplianceWhenOBHistory_TC18"/>
+      <class name="MRCS.Tests.HedisPPC.PPC_VerifyPostpartumShowsPositiveCompliance_TC20"/>
+      <class name="MRCS.Tests.HedisPPC.PPC_VerifyNonComplianceChase_TC25"/>
+    </classes>
+  </test> <!-- HedisPPC-Tests -->
+</suite> <!-- MRCS Test Suite -->

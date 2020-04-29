@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--This file is used to disable unnecessary logs showing by http client that has been used by web driver manager internally-->
+<configuration>
+    <logger name="org.apache" level="ERROR" />
+    <logger name="httpclient" level="ERROR" />
+</configuration>
